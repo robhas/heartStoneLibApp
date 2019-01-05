@@ -5,6 +5,7 @@ import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
 import { AboutPage } from '../about/about.page';
 import { ContactPage } from '../contact/contact.page';
+import { CardDeckPage } from '../card/card-deck/card-deck.page';
 
 const routes: Routes = [
   {
@@ -25,12 +26,17 @@ const routes: Routes = [
         path: 'contact',
         outlet: 'contact',
         component: ContactPage
+      },
+      {
+        path: 'card-deck',
+        outlet: 'card',
+        component: CardDeckPage
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(card:card)',
     pathMatch: 'full'
   }
 ];
